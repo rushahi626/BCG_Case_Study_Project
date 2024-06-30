@@ -40,6 +40,6 @@ Steps:
 Go to the Project Directory: $ cd 'BCG Sprk Project'
 run pip install command to import all dependencies listed on setup.py
 pip install .
-
+Ensure that the Spark and Java JDK environments are properly set up.
 Run main.py file using Spark Submit
 spark-submit main.py
