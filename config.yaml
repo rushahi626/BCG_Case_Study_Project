@@ -17,7 +17,3 @@ OUTPUT_PATH:
   8: Output/result_8
   9: Output/result_9
   10: Output/result_10
-
-
-FILE_FORMAT:
-  Output: csv
