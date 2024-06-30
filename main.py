@@ -18,7 +18,7 @@ if __name__ == "__main__":
     
     # Print the result of the analysis
     print(us_accident_obj.males_killed_count(output_file_paths.get(1)))
-    print(us_accident_obj.no_two_wheelers_crashed(output_file_paths.get()))
+    print(us_accident_obj.no_two_wheelers_crashed(output_file_paths.get(2)))
     print(us_accident_obj.top5_carsMakers_crash(output_file_paths.get(3)))
     print(us_accident_obj.lic_veh_HNR_count(output_file_paths.get(4)))
     print(us_accident_obj.state_with_no_female_acdnt(output_file_paths.get(5)))
