@@ -6,9 +6,13 @@ from src.utils import read_yaml,write_output
 from src.us_vehicle_accident_analysis import USVehicleAccidentAnalysis
 
 if __name__ == "__main__":
-    # Initialize Spark
+    '''
+    Initialize Spark
+    '''
     spark = SparkSession.builder.master("local").appName("My BCG Project").getOrCreate()
-    # Load the config file
+    '''
+    Load the config file
+    '''
     config_file_name = "config.yaml"
     config = read_yaml(config_file_name)
     output_file_paths = config.get("OUTPUT_PATH")
@@ -16,7 +20,9 @@ if __name__ == "__main__":
     # Create an instance of the analysis class
     us_accident_obj = USVehicleAccidentAnalysis(spark, config)
     
-    # Print the result of the analysis
+    '''
+    Print the result of the analysis and storing results to output path
+    '''
     print(us_accident_obj.males_killed_count(output_file_paths.get(1)))
     print(us_accident_obj.no_two_wheelers_crashed(output_file_paths.get(2)))
     print(us_accident_obj.top5_carsMakers_crash(output_file_paths.get(3)))
